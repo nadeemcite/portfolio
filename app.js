@@ -10,7 +10,15 @@ function link(link = null) {
       window.location.href = "mailto:nadeem.sajjad.1991@gmail.com";
   }
 }
-Mousetrap.bind(["command+t", "ctrl+t"], function (e) {
-  console.log("Command");
-  return false;
+function toggleDiv(event = { key: "p" }) {
+  try {
+    console.log(event);
+    $(".page").hide();
+    $(".page." + event.key.toLowerCase()).slideDown("slow");
+  } catch {}
+}
+
+$().ready(function () {
+  toggleDiv();
+  Mousetrap.bind(["p", "t", "k", "g"], toggleDiv);
 });
