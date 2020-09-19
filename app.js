@@ -10,3 +10,7 @@ function link(link = null) {
       window.location.href = "mailto:nadeem.sajjad.1991@gmail.com";
   }
 }
+Mousetrap.bind(["command+t", "ctrl+t"], function (e) {
+  console.log("Command");
+  return false;
+});
