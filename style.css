@@ -9,7 +9,7 @@ body {
   display: flex;
   background: #16a085;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .title-name {
   font-family: "Dancing Script", cursive;
