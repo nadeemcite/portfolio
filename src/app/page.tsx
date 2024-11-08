@@ -1,101 +1,155 @@
+import { ScrollButton } from "@/components/scrollbutton";
 import Image from "next/image";
+import React from "react";
+import ContactForm from "./contact-form";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="font-sans bg-gray-50 text-gray-800">
+      <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-200 to-gray-50 p-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-5xl space-y-8 md:space-y-0 md:space-x-12">
+          <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-gray-300 rounded-lg flex-shrink-0">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/me.webp"
+              alt="Nadeem's Profile Picture"
+              className="w-full h-full object-cover rounded-lg"
+              width={300}
+              height={700}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+
+          <div className="text-center md:text-left max-w-lg lg:max-w-md space-y-6">
+            <h1 className="text-5xl md:text-6xl font-bold">Hi, I'm Nadeem</h1>
+            <p className="text-lg md:text-xl leading-relaxed">
+              I'm a solution engineer with a talent for tackling complex
+              challenges and developing impactful software solutions. I bring
+              diverse skills and creative problem-solving to every project, with
+              a mission to drive meaningful impact through innovation,
+              collaboration, and community.
+            </p>
+            <div className="flex mt-4 space-x-4 justify-center md:justify-start">
+              <a
+                href="https://github.com/nadeemcite"
+                target="_blank"
+                className="text-blue-500 hover:underline text-lg"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nadeem-sajjad/"
+                target="_blank"
+                className="text-blue-500 hover:underline text-lg"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://x.com/nadym_sazad"
+                target="_blank"
+                className="text-blue-500 hover:underline text-lg"
+              >
+                X
+              </a>
+            </div>
+
+            <div className="mt-8">
+              <ScrollButton section={"portfolio"} />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <section id="portfolio" className="py-16 px-6 bg-white text-center">
+        <h2 className="text-3xl font-semibold mb-6">My Work</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="card bg-gray-100 shadow p-4">
+            <h3 className="text-xl font-semibold">Interpals Client</h3>
+            <p className="text-sm mt-2">
+              A Python client using OpenAI API for scheduling and automation.
+            </p>
+            <a
+              href="https://github.com/nadeemcite"
+              className="btn btn-sm btn-primary mt-4"
+            >
+              View on GitHub
+            </a>
+          </div>
+          <div className="card bg-gray-100 shadow p-4">
+            <h3 className="text-xl font-semibold">Automotive Scheduler</h3>
+            <p className="text-sm mt-2">
+              An automation tool built in Python with Google Apps Script
+              integration.
+            </p>
+            <a
+              href="https://github.com/nadeemcite"
+              className="btn btn-sm btn-primary mt-4"
+            >
+              View on GitHub
+            </a>
+          </div>
+          <div className="card bg-gray-100 shadow p-4">
+            <h3 className="text-xl font-semibold">Easy Quran App</h3>
+            <p className="text-sm mt-2">
+              A front-end project using Ionic and open APIs for seamless data
+              access.
+            </p>
+            <a
+              href="https://github.com/nadeemcite"
+              className="btn btn-sm btn-primary mt-4"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="py-16 px-6 bg-gray-50 text-center">
+        <h2 className="text-3xl font-semibold mb-6">Skills & Tools</h2>
+        <div className="flex flex-wrap justify-center space-x-4 max-w-3xl mx-auto">
+          <div className="badge badge-primary m-2">Python</div>
+          <div className="badge badge-primary m-2">JavaScript</div>
+          <div className="badge badge-primary m-2">TypeScript</div>
+          <div className="badge badge-primary m-2">Next.js</div>
+          <div className="badge badge-primary m-2">FastAPI</div>
+          <div className="badge badge-primary m-2">Docker</div>
+          <div className="badge badge-primary m-2">Kubernetes</div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-16 px-6 bg-gray-50 text-center">
+        <ContactForm />
+      </section>
+
+      <footer className="py-8 bg-gray-800 text-gray-200 text-center">
+        <p>
+          Connect with me on{" "}
+          <a
+            href="https://github.com/nadeemcite"
+            target="_blank"
+            className="text-blue-400"
+          >
+            GitHub
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://www.linkedin.com/in/nadeem-sajjad/"
+            target="_blank"
+            className="text-blue-400"
+          >
+            LinkedIn
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://x.com/nadym_sazad"
+            target="_blank"
+            className="text-blue-400"
+          >
+            X
+          </a>
+        </p>
+        <p className="mt-4">&copy; 2024 Nadeem – devnadeem.com</p>
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
