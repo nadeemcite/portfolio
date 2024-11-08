@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sourceCodePro.class} bg-gray-50 text-gray-800`}>
+      <body className={`${sourceCodePro.className} bg-gray-50 text-gray-800`}>
         {children}
       </body>
     </html>

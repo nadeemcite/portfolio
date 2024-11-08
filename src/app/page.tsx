@@ -19,9 +19,11 @@ const Home: React.FC = () => {
           </div>
 
           <div className="text-center md:text-left max-w-lg lg:max-w-md space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold">Hi, I'm Nadeem</h1>
+            <h1 className="text-5xl md:text-6xl font-bold">
+              Hi, I&apos;m Nadeem
+            </h1>
             <p className="text-lg md:text-xl leading-relaxed">
-              I'm a solution engineer with a talent for tackling complex
+              I&apos;m a solution engineer with a talent for tackling complex
               challenges and developing impactful software solutions. I bring
               diverse skills and creative problem-solving to every project, with
               a mission to drive meaningful impact through innovation,
